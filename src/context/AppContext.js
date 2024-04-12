@@ -36,7 +36,7 @@ const AppContextProvider = ({ children }) => {
     dispatch({ type: GET_DATA_BEGIN });
 
     try {
-      const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=643332a3ac6541d9b61211129241104&q=${state.city}&days=3&aqi=no&alerts=no`);
+      const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=643332a3ac6541d9b61211129241104&q=${state.city}&days=3&aqi=no&alerts=no`);
       if (!response.ok) {
         throw new Error('Network response was not OK');
       }
